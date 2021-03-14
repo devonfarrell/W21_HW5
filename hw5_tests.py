@@ -184,9 +184,7 @@ class TestCard(unittest.TestCase):
         c8 = hw5_cards.Deck()
         cards_choice = hw5_cards.Card(0, 13)
         count_of_deck = len(c8.cards)
-
         c8.replace_card(cards_choice)
-
         count_of_deck_end = len(c8.cards)
 
         self.assertEqual(count_of_deck, count_of_deck_end)    
