@@ -60,6 +60,7 @@ class TestCard(unittest.TestCase):
         '''
         c2 = hw5_cards.Card(1, 12)
         self.assertEqual(c2.suit_name, "Clubs")
+        
         return c2.suit_name, "Clubs"   
     
 
@@ -135,9 +136,7 @@ class TestCard(unittest.TestCase):
         c6 = hw5_cards.Deck()
         c6_count = len(c6.cards)
         c6.deal_card()
-        c6_end_count = len(c6.cards)
-
-        #Testing one fewer than usual 
+        c6_end_count = len(c6.cards) 
         self.assertEqual((c6_count - 1), c6_end_count)
 
         return (c6_count - 1), c6_end_count
@@ -159,11 +158,8 @@ class TestCard(unittest.TestCase):
         c7 = hw5_cards.Deck()
         card_dealing = c7.deal_card()
         dealing_count = len(c7.cards)
-
-        #Replace
         c7.replace_card(card_dealing)
         end_count = len(c7.cards)
-
         self.assertEqual((dealing_count + 1), end_count, 52)
     
         return (dealing_count + 1), end_count, 52
@@ -186,7 +182,6 @@ class TestCard(unittest.TestCase):
         count_of_deck = len(c8.cards)
         c8.replace_card(cards_choice)
         count_of_deck_end = len(c8.cards)
-
         self.assertEqual(count_of_deck, count_of_deck_end)    
     
         return count_of_deck, count_of_deck_end
